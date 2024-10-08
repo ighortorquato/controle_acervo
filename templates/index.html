@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Acervo de Biblioteca</title>
+</head>
+<body>
+    <h1>Acervo da Biblioteca</h1>
+    <a href="/adicionar">Adicionar Livro</a> | <a href="/pesquisar">Pesquisar Livros</a>
+    <table border="1">
+        <tr>
+            <th>Título</th>
+            <th>Autor</th>
+            <th>Editora</th>
+            <th>Ano</th>
+            <th>ISBN</th>
+        </tr>
+        {% for livro in livros %}
+        <tr>
+            <td>{{ livro[1] }}</td>
+            <td>{{ livro[2] }}</td>
+            <td>{{ livro[3] }}</td>
+            <td>{{ livro[4] }}</td>
+            <td>{{ livro[5] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

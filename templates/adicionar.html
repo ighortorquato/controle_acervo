@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Adicionar Livro</title>
+</head>
+<body>
+    <h1>Adicionar Novo Livro</h1>
+    <form method="POST">
+        <label for="titulo">Título:</label><br>
+        <input type="text" id="titulo" name="titulo" required><br><br>
+        <label for="autor">Autor:</label><br>
+        <input type="text" id="autor" name="autor" required><br><br>
+        <label for="editora">Editora:</label><br>
+        <input type="text" id="editora" name="editora"><br><br>
+        <label for="ano_publicacao">Ano de Publicação:</label><br>
+        <input type="number" id="ano_publicacao" name="ano_publicacao"><br><br>
+        <label for="isbn">ISBN:</label><br>
+        <input type="text" id="isbn" name="isbn"><br><br>
+        <button type="submit">Adicionar</button>
+    </form>
+    <br>
+    <a href="/">Voltar ao Acervo</a>
+</body>
+</html>

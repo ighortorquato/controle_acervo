@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Pesquisar Livros</title>
+</head>
+<body>
+    <h1>Pesquisar Livro no Acervo</h1>
+    <form method="POST">
+        <label for="termo_pesquisa">Pesquisar por título:</label><br>
+        <input type="text" id="termo_pesquisa" name="termo_pesquisa" required><br><br>
+        <button type="submit">Pesquisar</button>
+    </form>
+    <br>
+    <table border="1">
+        <tr>
+            <th>Título</th>
+            <th>Autor</th>
+            <th>Editora</th>
+            <th>Ano</th>
+            <th>ISBN</th>
+        </tr>
+        {% if livros %}
+            {% for livro in livros %}
+            <tr>
+                <td>{{ livro[1] }}</td>
+                <td>{{ livro[2] }}</td>
+                <td>{{ livro[3] }}</td>
+                <td>{{ livro[4] }}</td>
+                <td>{{ livro[5] }}</td>
+            </tr>
+            {% endfor %}
+        {% endif %}
+    </table>
+    <br>
+    <a href="/">Voltar ao Acervo</a>
+</body>
+</html>
